@@ -63,7 +63,39 @@ The complete project consists of two major parts:
     Baud Generator                     Coverage
                                        Assertions
 ```
+1
+🧩 RTL Design
 
+The RTL is organized into functional blocks:
+
+1. APB Interface
+
+Handles:
+
+APB setup and access phases
+Register read/write operations
+Address decoding
+Control and status register access
+2. SPI Control FSM
+
+Controls:
+
+SPI transaction start
+Chip-select generation
+Clock generation
+Serial data transmission
+Serial data reception
+Transfer completion
+3. Shift Register
+
+Used for:
+
+Parallel-to-serial conversion for MOSI
+Serial-to-parallel conversion for MISO
+MSB-first / LSB-first operation
+4. Clock / Baud Generator
+
+Generates the SPI clock based on the configured divider and system clock.
 ## 📐 Pictorial Architecture
 
 The repository contains a detailed pictorial architecture showing:
